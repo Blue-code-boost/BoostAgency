@@ -19,38 +19,98 @@ body {
 }
 
 header {
-  background: var(--white);
-  padding: 1rem 2rem;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
   position: sticky;
   top: 0;
+  width: 100%;
+  background: white;
   z-index: 100;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
 }
 
-header .logo img {
-  height: 50px;
-}
-
-.menu {
-  list-style: none;
+.nav {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1.2rem 3rem;
   display: flex;
-  gap: 1.5rem;
+  align-items: center;
+  justify-content: space-between;
+  font-family: 'THICCCBOI', sans-serif;
 }
 
-.menu a {
-  text-decoration: none;
-  color: var(--deep-gray);
+.nav .logo img {
+  height: 48px;
+}
+
+.nav .menu {
+  display: flex;
+  gap: 3rem;
+  list-style: none;
+}
+
+.nav .menu li a {
+  position: relative;
+  display: inline-block;
   font-weight: 600;
+  text-decoration: none;
+  color: #222;
+  padding: 0 0.3rem;
 }
 
-.menu .cta {
-  background: var(--purple-blast);
-  color: var(--white);
-  padding: 0.5rem 1rem;
-  border-radius: 20px;
+.nav .menu li a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+  width: 0%;
+  height: 2px;
+  background: #5b37b7; /* Purple Blast */
+  transform: skewX(-20deg); /* inclinación estilo cohete */
+  transition: width 0.4s cubic-bezier(0.77, 0, 0.175, 1);
 }
+
+.nav .menu li a:hover::after {
+  width: 100%;
+}
+
+.nav .menu li a:hover {
+  color: #5b37b7;
+}
+
+.nav .cta {
+  background: #5b37b7; /* Purple Blast */
+  color: white;
+  padding: 0.6rem 1.8rem;
+  border-radius: 50px;
+  font-weight: 700;
+  text-decoration: none;
+  letter-spacing: 0.5px;
+  transition: all 0.3s ease;
+}
+
+.nav .cta:hover {
+  background: #2b2730; /* Deep Gray */
+  box-shadow: 0 8px 20px rgba(43,39,48,0.3);
+  transform: translateY(-2px);
+}
+
+.nav .menu li a {
+  text-transform: uppercase;
+  font-size: 0.9rem;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .nav {
+    flex-direction: column;
+    gap: 1rem;
+    padding: 1.5rem;
+  }
+  .nav .menu {
+    flex-direction: column;
+    gap: 1rem;
+  }
+}
+
 
 .hero {
   position: relative;
@@ -82,13 +142,22 @@ header .logo img {
 }
 
 .hero-btn {
-  background: #000;
+  background: #000000; /* Purple Blast */
   color: #fff;
   padding: 0.75rem 2rem;
   border-radius: 8px;
   text-decoration: none;
   font-weight: bold;
+  transition: background 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
 }
+
+.hero-btn:hover {
+  background: #404041; /* Deep Gray */
+  transform: scale(1.05);
+  box-shadow: 0 0 35px rgba(91, 55, 183, 0.5);
+
+}
+
 
 .paint-layers {
   position: absolute;
@@ -118,7 +187,11 @@ header .logo img {
 .star {
   position: absolute;
   z-index: 4;
-  filter: brightness(0) invert(1); /* mantiene las estrellas blancas */
+  filter: brightness(0) invert(1);
+  opacity: 0;
+  transform: scale(2);
+  animation: starEntrance 1s ease-out forwards;
+  transition: transform 0.4s ease, box-shadow 0.4s ease; /* <- lo importante */
 }
 
 .star-left {
@@ -131,6 +204,17 @@ header .logo img {
   top: 3rem;
   right: 5rem;
   width: 120px;
+}
+
+@keyframes starEntrance {
+  to {
+    opacity: 1;
+  }
+}
+
+
+.star:hover {
+  transform: scale(1.2) rotate(8deg);
 }
 
 /* Responsive */

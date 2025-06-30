@@ -117,16 +117,29 @@ header .logo img {
 /* Estrellas */
 .star {
   position: absolute;
-  width: 80px;
+  z-index: 4;
+  filter: brightness(0) invert(1); /* mantiene las estrellas blancas */
 }
+
 .star-left {
-  top: 20%;
-  left: 5%;
+  bottom: 15rem;
+  left: 5rem;
+  width: 120px;
 }
+
 .star-right {
-  top: 15%;
-  right: 5%;
+  top: 3rem;
+  right: 5rem;
+  width: 120px;
 }
+
+/* Responsive */
+@media (min-width: 768px) {
+  .star-left, .star-right {
+    width: 90px;
+  }
+}
+
 
 .services-section {
   padding: 4rem 2rem;

@@ -225,9 +225,265 @@ header {
 }
 
 
-.services-section {
-  padding: 4rem 2rem;
+.services {
   text-align: center;
+  padding: 4rem 2rem;
+}
+
+.services h2 {
+  color: #4736c1; /* purple-blast */
+  font-size: 2rem;
+  margin-bottom: 2rem;
+}
+
+.service-cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.service-card {
+  background: #4736c1; /* purple-blast */
+  color: #fff;
+  padding: 2rem;
+  border-radius: 12px;
+  width: 220px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+.service-card:hover {
+  transform: translateY(-8px) scale(1.05);
+  box-shadow: 0 8px 25px rgba(71, 54, 193, 0.4);
+}
+
+.service-icon {
+  font-weight: bold;
+  margin-bottom: 1rem;
+  font-size: 0.9rem;
+}
+
+/* Responsive tweaks */
+@media (max-width: 768px) {
+  .service-cards {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+/* -------------------------------
+   BOOST PLANS con efecto planetario
+----------------------------------*/
+.boost-plans {
+  position: relative;
+  background: var(--purple-blast);
+  height: 280px;
+  overflow: hidden;
+  text-align: center;
+}
+
+.boost-plans h2 {
+  position: relative;
+  z-index: 10;
+  margin-top: 50px;
+  color: white;
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.planet-layer {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 50% / 100% 100% 0 0;
+}
+
+.planet-white {
+  top: 100px;
+  width: 150%;
+  height: 180px;
+  background: rgba(255,255,255,0.7);
+  z-index: 1;
+}
+
+.planet-gray {
+  top: 120px;
+  width: 140%;
+  height: 170px;
+  background: rgba(57,52,76,0.8);
+  z-index: 2;
+}
+
+.planet-black {
+  top: 140px;
+  width: 130%;
+  height: 160px;
+  background: rgba(0,0,0,0.9);
+  z-index: 3;
+}
+
+.planet-top {
+  top: 160px;
+  width: 120%;
+  height: 150px;
+  background: white;
+  z-index: 4;
+}
+
+
+.plan-cards {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  align-items: center;
+  padding: 4rem 2rem;
+}
+
+.plan-card {
+  width: 90%;
+  max-width: 900px;
+  padding: 2rem;
+  border-radius: 12px;
+  color: white;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.plan-icon {
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.plan-card:hover {
+  transform: scale(1.02);
+  box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+}
+
+.plan-gray {
+  background: var(--deep-gray);
+}
+
+.plan-black {
+  background: var(--black-magic);
+}
+
+.plan-purple {
+  background: var(--purple-blast);
+}
+
+/* Responsive ajuste */
+@media (max-width: 768px) {
+  .plan-card {
+    width: 100%;
+  }
+}
+
+.boost-plans-curve {
+  position: relative;
+  height: 100px;
+  background: var(--white); /* ahora el fondo es blanco, para que se funda con la siguiente sección */
+  overflow: hidden;
+}
+.boost-plans-curve::before {
+  content: "";
+  position: absolute;
+  top: -60px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 160%;
+  height: 200px;
+  background: var(--deep-gray); /* fondo anterior que baja hacia el blanco */
+  border-radius: 0 0 50% 50%;
+}
+.boost-media {
+  position: relative;
+  background: var(--deep-gray);
+  padding: 5rem 2rem;
+  text-align: center;
+}
+
+.boost-media h2 {
+  color: var(--white);
+  font-size: 2rem;
+  margin-bottom: 3rem;
+  z-index: 10;
+  position: relative;
+}
+
+.media-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 2rem;
+  justify-items: center;
+}
+
+.media-grid video {
+  border-radius: 16px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.4);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.media-grid video:hover {
+  transform: scale(1.05);
+  box-shadow: 0 12px 30px rgba(0,0,0,0.5);
+}
+
+/* Tamaños vertical y horizontal */
+.media-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 columnas fijas */
+  gap: 2rem;
+  justify-items: center;
+}
+
+
+.media-grid video.vertical {
+  width: 220px;
+  height: 390px;
+  object-fit: cover;
+  border-radius: 16px;
+}
+
+.media-grid video.horizontal {
+  width: 390px;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 16px;
+}
+
+
+/* Responsive tweaks */
+@media (max-width: 768px) {
+  .media-grid .vertical,
+  .media-grid .horizontal {
+    width: 90%;
+    height: auto;
+  }
+}
+
+.boost-media::before {
+  content: "";
+  position: absolute;
+  top: -60px;
+  left: 0;
+  width: 100%;
+  height: 120px;
+  background: var(--white); /* ahora se fusiona con el fondo blanco de arriba */
+  border-radius: 0 0 50% 50%;
+  z-index: 1;
+}
+
+.boost-media::after {
+  content: "";
+  position: absolute;
+  bottom: -40px;
+  left: 0;
+  width: 100%;
+  height: 80px;
+  background: var(--purple-blast);
+  border-radius: 50% 50% 0 0;
+  z-index: 1;
 }
 
 footer {

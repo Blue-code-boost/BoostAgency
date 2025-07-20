@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -7,139 +8,183 @@
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css" />
 </head>
+
 <body>
-<header>
-  <nav class="container nav">
-    <div class="logo">
-      <img src="assets/images/boost logos-01.png" alt="BOOST Marketing" />
+  <header>
+    <nav class="container nav">
+      <div class="logo">
+        <img src="assets/images/boost logos-01.png" alt="BOOST Marketing" />
+      </div>
+      <ul class="menu">
+        <li><a href="#services">Services</a></li>
+        <li><a href="#pricing">Pricing</a></li>
+        <li><a href="#media">Media</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <a href="#boost-sales" class="cta">Boost sales</a>
+    </nav>
+  </header>
+
+
+  <section class="hero">
+    <div class="decor">
+      <img src="assets/images/Recurso 3.svg" alt="star" class="star star-left" />
+      <img src="assets/images/Recurso 3.svg" alt="star" class="star star-right" />
     </div>
-    <ul class="menu">
-      <li><a href="#services">Services</a></li>
-      <li><a href="#pricing">Pricing</a></li>
-      <li><a href="#media">Media</a></li>
-      <li><a href="#contact">Contact</a></li>
-    </ul>
-    <a href="#boost-sales" class="cta">Boost sales</a>
-  </nav>
-</header>
+    <div class="hero-content">
+      <img src="assets/images/boost logos-03.png" alt="BOOST Logo" class="hero-logo" />
+      <h1>Elevate your brand.</h1>
+      <p>Disrupt the market. Join forces with the brightest minds</p>
+      <a href="#services" class="hero-btn">Boost my brand</a>
+    </div>
+    <div class="paint-layers">
+      <div class="layer layer2"></div>
+      <div class="layer layer1"></div>
+    </div>
+    <img src="assets/images/Rectangle 1.svg" alt="wave" class="wave" />
+  </section>
 
-
-<section class="hero">
-  <div class="decor">
-    <img src="assets/images/Recurso 3.svg" alt="star" class="star star-left" />
-    <img src="assets/images/Recurso 3.svg" alt="star" class="star star-right" />
-  </div>
-  <div class="hero-content">
-    <img src="assets/images/boost logos-03.png" alt="BOOST Logo" class="hero-logo" />
-    <h1>Elevate your brand.</h1>
-    <p>Disrupt the market. Join forces with the brightest minds</p>
-    <a href="#services" class="hero-btn">Boost my brand</a>
-  </div>
- <div class="paint-layers">
-  <div class="layer layer2"></div>
-  <div class="layer layer1"></div>
-</div>
-  <img src="assets/images/Rectangle 1.svg" alt="wave" class="wave" />
-</section>
-
-
-
-  <section class="services">
+<section class="services">
   <h2>SERVICES</h2>
   <div class="service-cards">
-    <div class="service-card">
-      <div class="service-icon">SVG</div>
+
+    <div class="service-card" style="--i:0">
+      <div class="service-icon icon-consulting">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none" stroke="white" stroke-width="3"
+          stroke-linecap="round" stroke-linejoin="round" >
+          <path d="M4 12c0-2.2 1.8-4 4-4h48c2.2 0 4 1.8 4 4v28c0 2.2-1.8 4-4 4H20l-12 12v-12H8c-2.2 0-4-1.8-4-4V12z" />
+          <polyline points="20 32 28 24 36 32 48 20" />
+          <polyline points="44 20 48 20 48 24" />
+        </svg>
+      </div>
       <h3>Consulting</h3>
-      <p>Construcción de identidad de alto impacto</p>
+      <p><em class="service-subtitle">Strategy with soul and structure.</em><br>
+        We don’t just tell you what to do—we dive in with you, refine your model, and activate a brand that’s built to scale.
+      </p>
     </div>
-    <div class="service-card">
-      <div class="service-icon">SVG</div>
+
+    <div class="service-card" style="--i:1">
+      <div class="service-icon icon-viral">
+        <img src="assets/icons/viral_creation_vector_clean.svg" class="service-icon-img" alt="Viral Creation Icon">
+      </div>
       <h3>Viral Creation</h3>
-      <p>Construcción de identidad de alto impacto</p>
+      <p><em class="service-subtitle">Content that explodes, connects, and converts.</em><br>
+        We craft visual narratives that don’t just look good—they feel good. Trends, storytelling, and raw emotion driving real growth.
+      </p>
     </div>
-    <div class="service-card">
-      <div class="service-icon">SVG</div>
-      <h3>Business automation</h3>
-      <p>Construcción de identidad de alto impacto</p>
+
+    <div class="service-card" style="--i:2">
+      <div class="service-icon icon-automation">
+       <img src="assets/icons/bussines automation.svg" class="service-icon-img" alt="Automation Icon">
+      </div>
+      <h3>Business Automation</h3>
+      <p><em class="service-subtitle">Automate your brand. Scale your time.</em><br>
+        We build no-code systems and workflows so your business runs on autopilot—freeing you to grow where it truly matters.
+      </p>
     </div>
+
   </div>
 </section>
 
-<section class="boost-plans">
-  <h2>BOOST PLANS</h2>
-  <div class="planet-layer planet-white"></div>
-  <div class="planet-layer planet-gray"></div>
-  <div class="planet-layer planet-black"></div>
-  <div class="planet-layer planet-top"></div>
-</section>
+
+
+  <section class="boost-plans">
+    <h2>BOOST PLANS</h2>
+    <div class="planet-layer planet-white"></div>
+    <div class="planet-layer planet-gray"></div>
+    <div class="planet-layer planet-black"></div>
+    <div class="planet-layer planet-top"></div>
+  </section>
 
 
 
 <section class="plan-cards">
+  <!-- SPARK -->
   <div class="plan-card plan-gray">
-    <div class="plan-icon">SVG</div>
-    <h3>Branding Disruptivo</h3>
-    <p>Construcción de identidad de alto impacto</p>
+    <div class="plan-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64" fill="none">
+  <circle cx="32" cy="32" r="30" fill="#fff"/>
+  <path d="M31.8 3L28 24h8l-4 19 12.8-23H34l2.5-17.5z" fill="#4736C1"/>
+  <path d="M22 42l-4 6h6l-2 7 7-10h-5l2.5-3.5z" fill="#4736C1"/>
+  <path d="M46 42l2 3h3l-2 3 1 3-3-2-4 2 1-3-2-3h3z" fill="#4736C1"/>
+</svg>
+</div>
+    <h3>SPARK</h3>
+    <p><em>The spark that ignites your brand.</em><br>
+    Launch your identity with a bold name, visual system, landing page, and brand story—everything you need to start strong.</p>
+    <p class="plan-price">💸 From $990 USD</p>
   </div>
+
+  <!-- IGNITE -->
   <div class="plan-card plan-black">
-    <div class="plan-icon">SVG</div>
-    <h3>Branding Disruptivo</h3>
-    <p>Construcción de identidad de alto impacto</p>
+    <div class="plan-icon"><?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<img src="assets/icons/boostplanignite.svg" alt="Ignite Plan Icon" width="96" height="96" />
+
+</div>
+    <h3>IGNITE</h3>
+    <p><em>Where energy becomes momentum.</em><br>
+    A full creative engine to scale: branding, visual content, content strategy, and automation tools—built to grow with you.</p>
+    <p class="plan-price">💸 From $1,800 USD</p>
   </div>
+
+  <!-- OVERBOOST -->
   <div class="plan-card plan-purple">
-    <div class="plan-icon">SVG</div>
-    <h3>Branding Disruptivo</h3>
-    <p>Construcción de identidad de alto impacto</p>
+    <div class="plan-icon"><img src="assets/icons/overboost.svg" alt="Ignite Plan Icon" width="96" height="96" /></div>
+    <h3>OVERBOOST</h3>
+    <p><em>Where your brand stops growing—and starts exploding.</em><br>
+    Full-stack branding, production, tech automation, viral content, and strategic support. Built to dominate your space.</p>
+    <p class="plan-price">💸 From $3,500 USD</p>
   </div>
 </section>
 
 
-<div class="planet-close"></div>
+
+  <div class="planet-close"></div>
 
 
-<section class="boost-media">
-  <h2>BOOST MEDIA</h2>
-  <div class="media-grid">
-    <video src="video1.mp4" controls class="vertical"></video>
-    <video src="video2.mp4" controls class="horizontal"></video>
-    <video src="video3.mp4" controls class="vertical"></video>
-    
-    <video src="video4.mp4" controls class="horizontal"></video>
-    <video src="video5.mp4" controls class="vertical"></video>
-    <video src="video6.mp4" controls class="horizontal"></video>
-    
-    <video src="video7.mp4" controls class="vertical"></video>
-    <video src="video8.mp4" controls class="horizontal"></video>
-    <video src="video9.mp4" controls class="vertical"></video>
-  </div>
-</section>
+  <section class="boost-media">
+    <h2>BOOST MEDIA</h2>
+    <div class="media-grid">
+      <video src="video1.mp4" controls class="vertical"></video>
+      <video src="video2.mp4" controls class="horizontal"></video>
+      <video src="video3.mp4" controls class="vertical"></video>
 
+      <video src="video4.mp4" controls class="horizontal"></video>
+      <video src="video5.mp4" controls class="vertical"></video>
+      <video src="video6.mp4" controls class="horizontal"></video>
 
- <section class="footer-wave">
-  <img src="assets/images/Rectangle 2.svg" alt="wave" class="wave-inverted" />
-</section>
-
-<footer class="footer">
-  <div class="footer-content">
-    <div class="footer-links">
-      <a href="#services">Services</a>
-      <a href="#plans">Plans</a>
-      <a href="#media">Media</a>
-      <a href="#contact">Contact</a>
+      <video src="video7.mp4" controls class="vertical"></video>
+      <video src="video8.mp4" controls class="horizontal"></video>
+      <video src="video9.mp4" controls class="vertical"></video>
     </div>
-    <div class="footer-socials">
-      <a href="#"><img src="assets/icons/ant-design_instagram-filled.svg" alt="Instagram" /></a>
-      <a href="#"><img src="assets/icons/ic_twotone-tiktok.svg" alt="TikTok" /></a>
-      <a href="#"><img src="assets/icons/line-md_spotify-filled.svg" alt="Spotify" /></a>
-      <a href="#"><img src="assets/icons/uil_youtube.svg" alt="YouTube" /></a>
+  </section>
+
+
+  <section class="footer-wave">
+    <img src="assets/images/Rectangle 2.svg" alt="wave" class="wave-inverted" />
+  </section>
+
+  <footer class="footer">
+    <div class="footer-content">
+      <div class="footer-links">
+        <a href="#services">Services</a>
+        <a href="#plans">Plans</a>
+        <a href="#media">Media</a>
+        <a href="#contact">Contact</a>
+      </div>
+      <div class="footer-socials">
+        <a href="#"><img src="assets/icons/ant-design_instagram-filled.svg" alt="Instagram" /></a>
+        <a href="#"><img src="assets/icons/ic_twotone-tiktok.svg" alt="TikTok" /></a>
+        <a href="#"><img src="assets/icons/line-md_spotify-filled.svg" alt="Spotify" /></a>
+        <a href="#"><img src="assets/icons/uil_youtube.svg" alt="YouTube" /></a>
+      </div>
     </div>
-  </div>
-  <p class="footer-text">
-    Derechos Reservados por Boost Agency<br>
-    By <span class="footer-blue">Blue.Code</span>
-  </p>
-</footer>
+    <p class="footer-text">
+      Derechos Reservados por Boost Agency<br>
+      By <span class="footer-blue">Blue.Code</span>
+    </p>
+  </footer>
 
 
 </body>
+
 </html>

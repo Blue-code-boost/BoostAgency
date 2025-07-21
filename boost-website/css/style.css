@@ -114,16 +114,18 @@ header {
 
 .hero {
   position: relative;
-  background: #4736c1; /* tu purple-blast */
-  min-height: 70vh;
+  background: #4736c1;
+  padding-top: 7rem;
+  padding-bottom: 15rem; /* da espacio real al contenido */
   overflow: hidden;
+
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   text-align: center;
-  padding-top: 4rem;
 }
+
 
 .hero .hero-logo {
   max-width: 320px;
@@ -142,56 +144,41 @@ header {
 }
 
 .hero-btn {
-  background: #000000; /* Purple Blast */
+  background: #000000;
   color: #fff;
   padding: 0.75rem 2rem;
   border-radius: 8px;
   text-decoration: none;
   font-weight: bold;
   transition: background 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+  z-index: 10;
 }
 
 .hero-btn:hover {
-  background: #404041; /* Deep Gray */
+  background: #404041;
   transform: scale(1.05);
   box-shadow: 0 0 35px rgba(91, 55, 183, 0.5);
-
 }
 
-
-.paint-layers {
-  position: absolute;
-  bottom: 0;
-  left: 15;
-  width: 100%;
-}
-
-.layer {
-  width: 100%;
-  height: 80px;
-  transform: skewY(-1deg);
-}
-/*
-.layer1 { background: #39344c; height: 95px; }
-.layer2 { background: #1f1537; height: 70px; }
-*/
-
+/* Curva blanca */
 .wave {
   position: absolute;
   bottom: 0;
   width: 100%;
+  z-index: 1;
+  pointer-events: none;
   transform: translateY(11%);
 }
 
 /* Estrellas */
 .star {
   position: absolute;
-  z-index: 4;
+  z-index: 2;
   filter: brightness(0) invert(1);
   opacity: 0;
   transform: scale(2);
   animation: starEntrance 1s ease-out forwards;
-  transition: transform 0.4s ease, box-shadow 0.4s ease; /* <- lo importante */
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
 }
 
 .star-left {
@@ -212,19 +199,23 @@ header {
   }
 }
 
-
 .star:hover {
   transform: scale(1.2) rotate(8deg);
 }
 
-/* Responsive */
+/* Responsive estrellas */
 @media (min-width: 768px) {
   .star-left, .star-right {
     width: 90px;
   }
 }
 
-/* SERVICES */
+@media (max-width: 480px) {
+  .hero {
+    padding-bottom: 12rem;
+  }
+}
+
 /* SERVICES */
 .services {
   text-align: center;

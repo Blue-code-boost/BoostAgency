@@ -372,6 +372,107 @@ header {
   }
 }
 
+.modal-service {
+  display: none;
+  position: fixed;
+  z-index: 9999;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.85);
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-service-content {
+  background-color: #fff;
+  margin: auto;
+  padding: 2rem;
+  border-radius: 12px;
+  max-width: 500px;
+  width: 90%;
+  position: relative;
+  animation: fadeIn 0.3s ease-in-out;
+  box-shadow: 0 8px 30px rgba(0,0,0,0.4);
+}
+
+.modal-service-content h3 {
+  color: var(--purple-blast);
+  margin-bottom: 1rem;
+}
+
+.modal-service-content p {
+  color: var(--deep-gray);
+  line-height: 1.6;
+  font-size: 0.95rem;
+}
+
+.modal-close {
+  position: absolute;
+  top: 12px;
+  right: 18px;
+  font-size: 2rem;
+  color: var(--purple-blast);
+  cursor: pointer;
+}
+
+/* Animación */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.modal-service-body {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  align-items: center;
+}
+
+.modal-actions {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin-top: 1rem;
+}
+
+.modal-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 0.75rem 1.25rem;
+  border-radius: 8px;
+  font-weight: bold;
+  text-decoration: none;
+  font-size: 0.95rem;
+  transition: all 0.3s ease;
+  color: white;
+}
+
+.modal-btn img {
+  width: 20px;
+  height: 20px;
+}
+
+.modal-btn.telegram {
+  background-color: #229ED9;
+}
+
+.modal-btn.telegram:hover {
+  background-color: #1b88ba;
+}
+
+.modal-btn.whatsapp {
+  background-color: #25D366;
+}
+
+.modal-btn.whatsapp:hover {
+  background-color: #1ebc58;
+}
+
 /* ----------------------------------
    BOOST PLANS con efecto planetario
 ----------------------------------*/
@@ -636,6 +737,23 @@ header {
   border-radius: 0 0 50% 50%;
 }
 
+/* ANIMACIÓN FADE IN MODAL */
+@keyframes fadeInModal {
+  0% {
+    opacity: 0;
+    transform: scale(0.96);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Aplica animación a modal cuando aparece */
+.modal-service.show .modal-service-content {
+  animation: fadeInModal 0.35s ease-out forwards;
+}
+
 /* BOOST MEDIA */
 .boost-media {
   position: relative;
@@ -817,7 +935,7 @@ header {
   width: 100%;
   transform: translateY(11%);
 }
-
+/* Footer general */
 .footer {
   background: var(--purple-blast);
   color: var(--white);
@@ -828,26 +946,58 @@ header {
 .footer-content {
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: flex-start;
   max-width: 1200px;
   margin: 0 auto 2rem;
   flex-wrap: wrap;
 }
 
-.footer-links a {
-  color: var(--white);
-  margin: 0 1rem;
-  text-decoration: none;
-  font-size: 0.9rem;
+/* Links en dos columnas */
+.footer-links {
+  display: flex;
+  gap: 3rem;
+  flex-wrap: wrap;
 }
 
-.footer-links a:hover {
+.link-column {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.link-column a {
+  color: var(--white);
+  margin: 0.3rem 0;
+  text-decoration: none;
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+.link-column a:hover {
   text-decoration: underline;
+}
+
+/* Derecha: logo arriba de redes */
+.footer-right {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 1rem;
+}
+
+.footer-logo img {
+  width: 140px;
+}
+
+.footer-socials {
+  display: flex;
+  gap: 0.75rem;
+  align-items: center;
+  justify-content: flex-end;
 }
 
 .footer-socials a img {
   width: 24px;
-  margin: 0 0.5rem;
   transition: transform 0.3s ease;
 }
 
@@ -855,22 +1005,44 @@ header {
   transform: scale(1.2);
 }
 
+/* Texto final */
 .footer-text {
   font-size: 0.85rem;
+  color: var(--white);
 }
 
 .footer-blue {
-  color: #43b3ff; /* Azul claro */
+  color: #43b3ff;
+  font-weight: bold;
 }
 
 /* Responsive */
 @media (max-width: 768px) {
   .footer-content {
     flex-direction: column;
-    text-align: center;
+    align-items: center;
+    gap: 2rem;
   }
 
   .footer-links {
-    margin-bottom: 1rem;
+    flex-direction: row;
+    justify-content: center;
+    gap: 2rem;
+  }
+
+  .link-column {
+    align-items: center;
+  }
+
+  .footer-right {
+    align-items: center;
+  }
+
+  .footer-logo img {
+    margin: 0 auto;
+  }
+
+  .footer-socials {
+    justify-content: center;
   }
 }

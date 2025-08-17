@@ -1201,18 +1201,7 @@ header {
   }
 }
 
-/*footer*/
-.footer-wave {
-  position: relative;
-   background: var(--deep-gray);
-}
 
-.wave-inverted {
-  display: block;
-  bottom: 0;
-  width: 100%;
-  transform: translateY(11%);
-}
 
 /* ===== carrusel partners (con logos) ===== */
 /* ====== Variables BOOST ====== */
@@ -1353,7 +1342,7 @@ header {
 }
 .partner-badge{
   font-family:Poppins, system-ui, sans-serif;
-  font-size:.75rem; font-weight:600;
+  font-size:.60rem; font-weight:600;
   color:var(--purple-blast);
   background: rgba(71,54,193,.12);
   border:1px solid rgba(71,54,193,.28);
@@ -1457,6 +1446,18 @@ header {
   }
 }
 
+/*footer*/
+.footer-wave {
+  position: relative;
+   background: var(--deep-gray);
+}
+
+.wave-inverted {
+  display: block;
+  bottom: 0;
+  width: 100%;
+  transform: translateY(11%);
+}
 /* Footer general */
 .footer {
   background: var(--purple-blast);

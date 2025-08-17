@@ -7,16 +7,16 @@
   <title>BOOST Marketing</title>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css" />
-   <link rel="icon" href="assets/images/boost logos-07.ico" type="image/x-icon">
-   <link rel="stylesheet" href="css/responsive.css">
-   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="assets/images/boost logos-07.ico" type="image/x-icon">
+  <link rel="stylesheet" href="css/responsive.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 
 <body>
   <header>
     <nav class="container nav">
       <div class="logo">
-       <a href="index.html"><img src="assets/images/boost logos-01.png" alt="BOOST Marketing" /></a>
+        <a href="index.html"><img src="assets/images/boost logos-01.png" alt="BOOST Marketing" /></a>
       </div>
       <ul class="menu">
         <li><a href="#services">Services</a></li>
@@ -36,9 +36,9 @@
     </div>
     <div class="hero-content">
       <img src="assets/images/boost logos-03.png" alt="BOOST Logo" class="hero-logo" />
-      <h1>Elevate your brand.</h1>
-      <p>Disrupt the market. Join forces with the brightest minds</p>
-      <a href="#pricing" class="hero-btn">Boost my brand</a>
+      <h1>Your Growth, Your Story Amplified</h1>
+      <p>We map your customer’s journey, create stories that sell, and deliver measurable growth.</p>
+      <a href="#pricing" class="hero-btn">Let’s Map Your Growth</a>
     </div>
     <div class="paint-layers">
       <div class="layer layer2"></div>
@@ -46,6 +46,39 @@
     </div>
     <img src="assets/images/Rectangle 1.svg" alt="wave" class="wave" />
   </section>
+
+  <section class="about-section">
+    <h2>What can we do for You?</h2>
+    <p>Your customers don’t care about our agency story they care about what we can do for them. We start with you: your
+      market, your challenges, your goals. Then we craft marketing that turns attention into action.</p>
+  </section>
+
+  <section class="services-intro v2">
+    <h2>How We Deliver Results</h2>
+
+    <div class="services">
+      <article class="svc-card">
+        <div class="svc-pill">Always-on</div>
+        <h3>Own your audience’s attention — daily</h3>
+        <p>Manage your social channels with content that sparks conversations, grows followers, and turns engagement
+          into leads.</p>
+      </article>
+
+      <article class="svc-card">
+        <div class="svc-pill">Performance</div>
+        <h3>Turn clicks into customers</h3>
+        <p>Laser-focused ad campaigns reaching the right people at the right time, with messages that move them to act.
+        </p>
+      </article>
+
+      <article class="svc-card">
+        <div class="svc-pill">Creative</div>
+        <h3>Stories that sell</h3>
+        <p>From videos to photos to copywriting, we create assets that inspire action.</p>
+      </article>
+    </div>
+  </section>
+
 
   <section class="services" id="services">
     <h2>SERVICES</h2>
@@ -79,7 +112,7 @@
         </p>
       </div>
 
-    <div class="service-card" onclick="openServiceModal('automation')" style="--i:2">
+      <div class="service-card" onclick="openServiceModal('automation')" style="--i:2">
         <div class="service-icon icon-automation">
           <img src="assets/icons/bussines automation.svg" class="service-icon-img" alt="Automation Icon">
         </div>
@@ -106,46 +139,81 @@
 
 
   <section class="plan-cards">
-  <!-- SPARK -->
-  <div class="plan-card plan-gray" onclick="openBoostPlanModal('SPARK', 'The spark that ignites your brand. Perfect to start strong with energy and presence.')">
-    <div class="plan-icon">
-      <!-- Ícono en SVG -->
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64" fill="none">
-        <circle cx="32" cy="32" r="30" fill="#fff" />
-        <path d="M31.8 3L28 24h8l-4 19 12.8-23H34l2.5-17.5z" fill="#4736C1" />
-        <path d="M22 42l-4 6h6l-2 7 7-10h-5l2.5-3.5z" fill="#4736C1" />
-        <path d="M46 42l2 3h3l-2 3 1 3-3-2-4 2 1-3-2-3h3z" fill="#4736C1" />
-      </svg>
+    <!-- SPARK -->
+    <div class="plan-card plan-gray"
+      onclick="openBoostPlanModal('SPARK', 'The spark that ignites your brand. Perfect to start strong with energy and presence.')">
+      <div class="plan-icon">
+        <!-- Ícono en SVG -->
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64" fill="none">
+          <circle cx="32" cy="32" r="30" fill="#fff" />
+          <path d="M31.8 3L28 24h8l-4 19 12.8-23H34l2.5-17.5z" fill="#4736C1" />
+          <path d="M22 42l-4 6h6l-2 7 7-10h-5l2.5-3.5z" fill="#4736C1" />
+          <path d="M46 42l2 3h3l-2 3 1 3-3-2-4 2 1-3-2-3h3z" fill="#4736C1" />
+        </svg>
+      </div>
+      <h3>SPARK</h3>
+      <p><em>The spark that ignites your brand.</em><br>
+        Launch your identity with a bold name, visual system, landing page, and brand story—everything you need to start
+        strong.</p>
+      <p class="plan-price">💸 From $990 USD</p>
     </div>
-    <h3>SPARK</h3>
-    <p><em>The spark that ignites your brand.</em><br>
-      Launch your identity with a bold name, visual system, landing page, and brand story—everything you need to start strong.</p>
-    <p class="plan-price">💸 From $990 USD</p>
-  </div>
 
-  <!-- IGNITE -->
-  <div class="plan-card plan-black" onclick="openBoostPlanModal('IGNITE', 'Where energy turns into momentum. Amplify your impact and scale your results.')">
-    <div class="plan-icon">
-      <img src="assets/icons/boostplanignite.svg" alt="Ignite Plan Icon" width="96" height="96" />
+    <!-- IGNITE -->
+    <div class="plan-card plan-black"
+      onclick="openBoostPlanModal('IGNITE', 'Where energy turns into momentum. Amplify your impact and scale your results.')">
+      <div class="plan-icon">
+        <img src="assets/icons/boostplanignite.svg" alt="Ignite Plan Icon" width="96" height="96" />
+      </div>
+      <h3>IGNITE</h3>
+      <p><em>Where energy becomes momentum.</em><br>
+        A full creative engine to scale: branding, visual content, content strategy, and automation tools—built to grow
+        with you.</p>
+      <p class="plan-price">💸 From $1,800 USD</p>
     </div>
-    <h3>IGNITE</h3>
-    <p><em>Where energy becomes momentum.</em><br>
-      A full creative engine to scale: branding, visual content, content strategy, and automation tools—built to grow with you.</p>
-    <p class="plan-price">💸 From $1,800 USD</p>
-  </div>
 
-  <!-- OVERBOOST -->
-  <div class="plan-card plan-purple" onclick="openBoostPlanModal('OVERBOOST', 'Your brand stops growing… and starts exploding. Advanced campaigns, viral content, and full automation.')">
-    <div class="plan-icon">
-      <img src="assets/icons/overboost.svg" alt="Overboost Plan Icon" width="96" height="96" />
+    <!-- OVERBOOST -->
+    <div class="plan-card plan-purple"
+      onclick="openBoostPlanModal('OVERBOOST', 'Your brand stops growing… and starts exploding. Advanced campaigns, viral content, and full automation.')">
+      <div class="plan-icon">
+        <img src="assets/icons/overboost.svg" alt="Overboost Plan Icon" width="96" height="96" />
+      </div>
+      <h3>OVERBOOST</h3>
+      <p><em>Where your brand stops growing—and starts exploding.</em><br>
+        Full-stack branding, production, tech automation, viral content, and strategic support. Built to dominate your
+        space.</p>
+      <p class="plan-price">💸 From $3,500 USD</p>
     </div>
-    <h3>OVERBOOST</h3>
-    <p><em>Where your brand stops growing—and starts exploding.</em><br>
-      Full-stack branding, production, tech automation, viral content, and strategic support. Built to dominate your space.</p>
-    <p class="plan-price">💸 From $3,500 USD</p>
-  </div>
-</section>
+  </section>
 
+  <section class="results-stats" data-force-anim="true">
+    <h2>Proven. Measurable. Repeatable.</h2>
+
+    <div class="results">
+      <article class="result-card" data-target="200" data-max="200" data-suffix="%">
+        <strong class="result-value" aria-live="polite">0%</strong>
+        <p>Engagement in 90 days for a property development client.</p>
+        <div class="progress" role="progressbar" aria-valuemin="0" aria-valuemax="200" aria-valuenow="0">
+          <span class="bar"></span>
+        </div>
+      </article>
+
+      <article class="result-card" data-target="12" data-max="12" data-suffix="×">
+        <strong class="result-value" aria-live="polite">0×</strong>
+        <p>ROI on ad spend for a retail e-commerce brand.</p>
+        <div class="progress" role="progressbar" aria-valuemin="0" aria-valuemax="12" aria-valuenow="0">
+          <span class="bar"></span>
+        </div>
+      </article>
+
+      <article class="result-card" data-target="50" data-max="50" data-suffix="K+">
+        <strong class="result-value" aria-live="polite">0K+</strong>
+        <p>Event attendees reached through strategic partnerships.</p>
+        <div class="progress" role="progressbar" aria-valuemin="0" aria-valuemax="50" aria-valuenow="0">
+          <span class="bar"></span>
+        </div>
+      </article>
+    </div>
+  </section>
 
 
   <div class="planet-close"></div>
@@ -240,12 +308,65 @@
   </section>
 
 
+ <section class="partners-section">
+  <h2 class="partners-title">Our Network is Your Advantage</h2>
+
+  <div class="partners-carousel" aria-label="Allies & Strategic Partners">
+    <button class="pc-nav pc-prev" aria-label="Previous partners" title="Previous">&#10094;</button>
+
+    <div class="pc-track" tabindex="0">
+      <!-- Slide 1 -->
+      <article class="partner-card vlogo">
+        <div class="partner-stripe" aria-hidden="true"></div>
+        <figure class="partner-logo">
+          <img src="assets/images/image_2025-08-17_01-36-37.png" alt="K-World Entertainment logo" />
+        </figure>
+        <header class="partner-head">
+          <div class="partner-badge badge-entertainment">Entertainment</div>
+          <strong>K-World Entertainment</strong>
+        </header>
+        <p>Access global K-pop fan bases for cross-cultural engagement.</p>
+      </article>
+
+      <!-- Slide 2 -->
+      <article class="partner-card vlogo">
+        <div class="partner-stripe" aria-hidden="true"></div>
+        <figure class="partner-logo">
+          <img src="assets/images/image_2025-08-17_01-37-26.png" alt="China507PMA logo" />
+        </figure>
+        <header class="partner-head">
+          <div class="partner-badge badge-community">Community</div>
+          <strong>China507PMA</strong>
+        </header>
+        <p>150K+ on WeChat, 50K on Instagram, 50K on Chinese TikTok.</p>
+      </article>
+
+      <!-- Slide 3 -->
+      <article class="partner-card vlogo">
+        <div class="partner-stripe" aria-hidden="true"></div>
+        <figure class="partner-logo">
+          <img src="assets/images/logos blue code-01.png" alt="BlueCode logo" />
+        </figure>
+        <header class="partner-head">
+          <div class="partner-badge badge-tech">Tech</div>
+          <strong>BlueCode</strong>
+        </header>
+        <p>Tech-driven marketing solutions and interactive campaign tools.</p>
+      </article>
+    </div>
+
+    <button class="pc-nav pc-next" aria-label="Next partners" title="Next">&#10095;</button>
+    <div class="pc-dots" aria-hidden="true"></div>
+  </div>
+</section>
+
+
 
   <section class="footer-wave">
     <img src="assets/images/Rectangle 2.svg" alt="wave" class="wave-inverted" />
   </section>
 
- <footer class="footer">
+  <footer class="footer">
   <div class="footer-content">
     <!-- Columna izquierda: Links en 2 columnas -->
     <div class="footer-links">
@@ -259,16 +380,31 @@
       </div>
     </div>
 
+    <!-- Sección central: Mensaje -->
+    <div class="footer-cta">
+      <h2>It’s not about us  it’s about where you’re going.</h2>
+      <p>Let’s create a roadmap that gets you there  with results that prove it.</p>
+      <a href="#pricing" class="footer-btn">Start My Roadmap</a>
+    </div>
+
     <!-- Columna derecha: Logo + redes sociales -->
     <div class="footer-right">
       <div class="footer-logo">
         <img src="assets/images/boost logos-03.png" alt="BOOST Marketing Logo" />
       </div>
       <div class="footer-socials">
-        <a href="https://www.instagram.com/boostagencyamerica?utm_source=ig_web_button_share_sheet&igsh=NzFzYTRrODgzYXNn"><img src="assets/icons/ant-design_instagram-filled.svg" alt="Instagram" /></a>
-        <a href="https://www.tiktok.com/@boostagencyamerica?is_from_webapp=1&sender_device=pc"><img src="assets/icons/ic_twotone-tiktok.svg" alt="TikTok" /></a>
-        <a href="https://www.youtube.com/@BoostAgencyAmerica"><img src="assets/icons/uil_youtube.svg" alt="YouTube" /></a>
-       <a href="#"><img src="assets/icons/line-md_spotify-filled.svg" alt="Spotify" /></a>
+        <a href="https://www.instagram.com/boostagencyamerica?utm_source=ig_web_button_share_sheet&igsh=NzFzYTRrODgzYXNn">
+          <img src="assets/icons/ant-design_instagram-filled.svg" alt="Instagram" />
+        </a>
+        <a href="https://www.tiktok.com/@boostagencyamerica?is_from_webapp=1&sender_device=pc">
+          <img src="assets/icons/ic_twotone-tiktok.svg" alt="TikTok" />
+        </a>
+        <a href="https://www.youtube.com/@BoostAgencyAmerica">
+          <img src="assets/icons/uil_youtube.svg" alt="YouTube" />
+        </a>
+        <a href="#">
+          <img src="assets/icons/line-md_spotify-filled.svg" alt="Spotify" />
+        </a>
       </div>
     </div>
   </div>
@@ -281,9 +417,11 @@
 </footer>
 
 
-
+<script src="js/partners-animations.js" defer></script>
+  <script src="js/partners-carousel.js" defer></script>
   <script src="js/main.js"></script>
   <script async defer src="https://www.instagram.com/embed.js"></script>
+  <script src="js/results-stats.js" defer></script>
 
   <!-- MODAL -->
   <div id="videoModal" class="video-modal">
@@ -303,47 +441,47 @@
   </div>
 
 
-<!-- Modal General para Services -->
-<div id="servicesModal" class="modal-service">
-  <div class="modal-service-content">
-    <span class="modal-close" onclick="closeServiceModal()">&times;</span>
-    
-    <div class="modal-service-body">
-      <h3 id="modalServiceTitle">Title</h3>
-      <p id="modalServiceText">Description</p>
+  <!-- Modal General para Services -->
+  <div id="servicesModal" class="modal-service">
+    <div class="modal-service-content">
+      <span class="modal-close" onclick="closeServiceModal()">&times;</span>
 
-      <div class="modal-actions">
-        <a href="https://t.me/elsato2112" target="_blank" class="modal-btn telegram">
-          <img src="assets/icons/bxl_telegram.svg" alt="Telegram" /> Chat on Telegram
-        </a>
-        <a href="https://wa.me/50765004890" target="_blank" class="modal-btn whatsapp">
-          <img src="assets/icons/mingcute_whatsapp-fill.svg" alt="WhatsApp" /> WhatsApp Us
-        </a>
+      <div class="modal-service-body">
+        <h3 id="modalServiceTitle">Title</h3>
+        <p id="modalServiceText">Description</p>
+
+        <div class="modal-actions">
+          <a href="https://t.me/elsato2112" target="_blank" class="modal-btn telegram">
+            <img src="assets/icons/bxl_telegram.svg" alt="Telegram" /> Chat on Telegram
+          </a>
+          <a href="https://wa.me/50765004890" target="_blank" class="modal-btn whatsapp">
+            <img src="assets/icons/mingcute_whatsapp-fill.svg" alt="WhatsApp" /> WhatsApp Us
+          </a>
+        </div>
       </div>
     </div>
   </div>
-</div>
 
-<!-- Modal para Boost Plans -->
-<div id="boostPlanModal" class="modal-service">
-  <div class="modal-service-content">
-    <span class="modal-close" onclick="closeBoostPlanModal()">&times;</span>
-    
-    <div class="modal-service-body">
-      <h3 id="modalPlanTitle">Plan Name</h3>
-      <p id="modalPlanDescription">Plan description here...</p>
+  <!-- Modal para Boost Plans -->
+  <div id="boostPlanModal" class="modal-service">
+    <div class="modal-service-content">
+      <span class="modal-close" onclick="closeBoostPlanModal()">&times;</span>
 
-      <div class="modal-actions">
-        <a href="https://t.me/elsato2112" target="_blank" class="modal-btn telegram">
-          <img src="assets/icons/bxl_telegram.svg" alt="Telegram" /> Chat on Telegram
-        </a>
-        <a href="https://wa.me/50765004890" target="_blank" class="modal-btn whatsapp">
-          <img src="assets/icons/mingcute_whatsapp-fill.svg" alt="WhatsApp" /> WhatsApp Us
-        </a>
+      <div class="modal-service-body">
+        <h3 id="modalPlanTitle">Plan Name</h3>
+        <p id="modalPlanDescription">Plan description here...</p>
+
+        <div class="modal-actions">
+          <a href="https://t.me/elsato2112" target="_blank" class="modal-btn telegram">
+            <img src="assets/icons/bxl_telegram.svg" alt="Telegram" /> Chat on Telegram
+          </a>
+          <a href="https://wa.me/50765004890" target="_blank" class="modal-btn whatsapp">
+            <img src="assets/icons/mingcute_whatsapp-fill.svg" alt="WhatsApp" /> WhatsApp Us
+          </a>
+        </div>
       </div>
     </div>
   </div>
-</div>
 
 </body>
 
